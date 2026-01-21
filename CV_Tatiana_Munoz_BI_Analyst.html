@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Tatiana Muñoz Arias | Business Intelligence Analyst</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A4;
+            margin: 1.5cm;
+        }
+
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            font-size: 11pt;
+            line-height: 1.4;
+            color: #2c3e50;
+            background: white;
+            max-width: 21cm;
+            margin: 0 auto;
+            padding: 1cm;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 1.5em;
+            padding-bottom: 0.8em;
+            border-bottom: 3px solid #0066CC;
+        }
+
+        .header h1 {
+            font-size: 24pt;
+            font-weight: 700;
+            color: #0066CC;
+            margin-bottom: 0.2em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header h2 {
+            font-size: 14pt;
+            font-weight: 600;
+            color: #34495e;
+            margin-bottom: 0.5em;
+        }
+
+        .contact-info {
+            font-size: 10pt;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .contact-info a {
+            color: #0066CC;
+            text-decoration: none;
+        }
+
+        /* Section Titles */
+        .section {
+            margin-bottom: 1.2em;
+            page-break-inside: avoid;
+        }
+
+        .section-title {
+            font-size: 13pt;
+            font-weight: 700;
+            color: #0066CC;
+            text-transform: uppercase;
+            border-bottom: 2px solid #0066CC;
+            padding-bottom: 0.3em;
+            margin-bottom: 0.7em;
+            letter-spacing: 0.5px;
+        }
+
+        /* Professional Summary */
+        .summary {
+            text-align: justify;
+            line-height: 1.5;
+            margin-bottom: 1em;
+        }
+
+        /* Experience */
+        .job {
+            margin-bottom: 1em;
+            page-break-inside: avoid;
+        }
+
+        .job-header {
+            margin-bottom: 0.4em;
+        }
+
+        .job-title {
+            font-size: 12pt;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .company {
+            font-size: 11pt;
+            font-weight: 600;
+            color: #0066CC;
+        }
+
+        .job-meta {
+            font-size: 10pt;
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 0.4em;
+        }
+
+        .job-description {
+            margin-left: 0;
+            padding-left: 1.2em;
+        }
+
+        .job-description li {
+            margin-bottom: 0.3em;
+            line-height: 1.4;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.8em;
+            margin-bottom: 0.5em;
+        }
+
+        .skill-category {
+            page-break-inside: avoid;
+        }
+
+        .skill-category strong {
+            display: block;
+            color: #2c3e50;
+            font-weight: 700;
+            margin-bottom: 0.3em;
+            font-size: 10.5pt;
+        }
+
+        .skill-tags {
+            line-height: 1.6;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 0.8em;
+            page-break-inside: avoid;
+        }
+
+        .degree {
+            font-weight: 700;
+            color: #2c3e50;
+            font-size: 11pt;
+        }
+
+        .institution {
+            color: #0066CC;
+            font-weight: 600;
+            font-size: 10.5pt;
+        }
+
+        .edu-meta {
+            font-size: 10pt;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        /* Projects */
+        .project {
+            margin-bottom: 0.8em;
+            page-break-inside: avoid;
+        }
+
+        .project-title {
+            font-weight: 700;
+            color: #2c3e50;
+            font-size: 11pt;
+        }
+
+        .project-tech {
+            font-size: 9.5pt;
+            color: #0066CC;
+            font-style: italic;
+            margin-bottom: 0.2em;
+        }
+
+        .project-description {
+            font-size: 10pt;
+            line-height: 1.4;
+        }
+
+        /* Languages & Certifications */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1em;
+        }
+
+        .list-inline {
+            list-style: none;
+            padding: 0;
+        }
+
+        .list-inline li {
+            margin-bottom: 0.3em;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                padding: 0;
+                margin: 0;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+
+            .job, .education-item, .project {
+                page-break-inside: avoid;
+            }
+
+            a {
+                color: #0066CC;
+                text-decoration: none;
+            }
+        }
+
+        /* Achievement Boxes */
+        .achievements {
+            background-color: #f0f8ff;
+            border-left: 3px solid #0066CC;
+            padding: 0.5em 0.8em;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            page-break-inside: avoid;
+        }
+
+        .achievements strong {
+            color: #0066CC;
+            font-weight: 700;
+        }
+
+        .achievements ul {
+            margin-top: 0.3em;
+            padding-left: 1.2em;
+        }
+
+        .achievements li {
+            margin-bottom: 0.2em;
+            font-size: 10pt;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Tatiana Muñoz Arias</h1>
+        <h2>Business Intelligence Analyst | Data Scientist</h2>
+        <div class="contact-info">
+            <strong>Email:</strong> tatiana.441@gmail.com |
+            <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/tmarias">linkedin.com/in/tmarias</a> |
+            <strong>GitHub:</strong> <a href="https://github.com/tatiana441">github.com/tatiana441</a><br>
+            <strong>Portfolio:</strong> <a href="https://tatiana441.github.io/customer-satisfaction-analysis/">tatiana441.github.io</a> |
+            <strong>Idiomas:</strong> Español (Nativo), Inglés (B2), Portugués (Intermedio), Coreano (Básico)
+        </div>
+    </div>
+
+    <!-- Professional Summary -->
+    <div class="section">
+        <h3 class="section-title">Perfil Profesional</h3>
+        <p class="summary">
+            Business Intelligence Analyst con <strong>4+ años de experiencia</strong> en análisis de datos, visualización y reporting ejecutivo. Especializada en SQL, Power BI y Excel para transformar datasets complejos en insights accionables que impulsan decisiones estratégicas. Experiencia demostrada en <strong>Oil & Gas</strong> y <strong>mercados panamericanos</strong>, con habilidades en geomecánica, monitoreo de pozos y optimización de KPIs. Sólido conocimiento de metodologías <strong>Six Sigma</strong> y <strong>Agile/Scrum</strong>. Dominio de herramientas de IA como Claude Code, ChatGPT, Cursor y Gemini para automatización y creación de contenido.
+        </p>
+    </div>
+
+    <!-- Experience -->
+    <div class="section">
+        <h3 class="section-title">Experiencia Profesional</h3>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Business Intelligence Analyst II / Reporting Analyst Bilingual</div>
+                <div class="company">Teleperformance</div>
+                <div class="job-meta">Marzo 2021 - Presente | Remoto (4 años)</div>
+            </div>
+            <ul class="job-description">
+                <li><strong>Advanced Data Analysis and Query Management:</strong> Utilicé SQL para realizar consultas avanzadas, asegurando la precisión e integridad de los datos para fines analíticos. Gestioné y limpié grandes conjuntos de datos usando Excel y Power BI para mejorar los procesos de toma de decisiones.</li>
+                <li><strong>Dashboard Creation and Data Visualization:</strong> Creé dashboards interactivos en Power BI para visualizar insights clave de negocio, tendencias y KPIs, permitiendo al liderazgo tomar decisiones basadas en datos.</li>
+                <li><strong>Executive Presentations and Reporting:</strong> Diseñé y presenté informes a nivel ejecutivo, sintetizando análisis de KPIs y métricas, ayudando a impulsar estrategias y decisiones clave del negocio.</li>
+                <li>Monitoreé y controlé KPIs de calidad, productividad y resolución en primer contacto para operaciones BPO de alto volumen.</li>
+                <li>Analicé bases de datos extraídas de aplicaciones de clientes diseñando estrategias que generan valor al menor costo posible.</li>
+                <li>Responsable directo de reportería a Oficina Regional y Operaciones según requerido.</li>
+            </ul>
+            <div class="achievements">
+                <strong>Logros principales:</strong>
+                <ul>
+                    <li>Entregué insights accionables que ayudaron a impulsar decisiones estratégicas para el mercado panamericano</li>
+                    <li>Implementé dashboards automatizados que redujeron el tiempo de reporting en 40%</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Geomechanics and Wells Monitoring Analyst</div>
+                <div class="company">SGS Colombia S.A.S.</div>
+                <div class="job-meta">Diciembre 2022 - Marzo 2025 | Híbrido (2+ años)</div>
+            </div>
+            <ul class="job-description">
+                <li><strong>Real-Time Geomechanical Monitoring:</strong> Analicé y monitoreé datos geomecánicos de pozos en campos de Piedemonte, Akacias, Castilla y Chichimene usando el software especializado EcoAGE.</li>
+                <li><strong>Data Analysis and Reporting:</strong> Interpreté grandes volúmenes de datos de perforación y geomecánicos para identificar tendencias, correlaciones y anomalías. Preparé informes detallados con insights accionables para ingenieros y gerentes de operaciones.</li>
+                <li><strong>Collaboration and Problem-Solving:</strong> Trabajé en estrecha colaboración con equipos multidisciplinarios para apoyar la toma de decisiones de perforación y garantizar operaciones seguras y eficientes.</li>
+                <li>Monitoreé en tiempo real eventos críticos como kick detections, pérdidas de circulación y stuck pipe para prevenir NPTs.</li>
+            </ul>
+            <div class="achievements">
+                <strong>Logros principales:</strong>
+                <ul>
+                    <li>Mejoré el proceso de monitoreo en tiempo real, asegurando la precisión de los datos</li>
+                    <li>Contribuí a reducir NPTs proporcionando insights accionables y recomendaciones operacionales</li>
+                    <li>Apoyé la eficiencia operacional identificando correlaciones y tendencias clave en las operaciones</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="section">
+        <h3 class="section-title">Habilidades Técnicas</h3>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <strong>Análisis de Datos (4 años):</strong>
+                <div class="skill-tags">SQL (Avanzado), Excel (Power Query, VBA, DAX), Python (Pandas, EDA), Data Mining, ETL, Data Cleaning</div>
+            </div>
+            <div class="skill-category">
+                <strong>Visualización & BI (3 años):</strong>
+                <div class="skill-tags">Power BI (Dashboards, DAX), Data Visualization, Reporting Ejecutivo, Storytelling con Datos</div>
+            </div>
+            <div class="skill-category">
+                <strong>Industrias:</strong>
+                <div class="skill-tags">Oil & Gas (4 años), Geomechanics, Pan American Market (3 años), BPO Operations, Quality Assurance</div>
+            </div>
+            <div class="skill-category">
+                <strong>Metodologías:</strong>
+                <div class="skill-tags">Six Sigma, Agile/Scrum, Project Management (1 año), Jira, Strategic Planning</div>
+            </div>
+            <div class="skill-category">
+                <strong>Software Especializado:</strong>
+                <div class="skill-tags">EcoAGE (Ecopetrol), SQL Server, PowerPoint, Google Sheets, Jupyter Notebook</div>
+            </div>
+            <div class="skill-category">
+                <strong>AI Tools & Automation:</strong>
+                <div class="skill-tags">Claude Code, Claude AI, ChatGPT, Gemini, Cursor, Lovable, Kiro, Creación de Contenido</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="section">
+        <h3 class="section-title">Proyectos Destacados</h3>
+
+        <div class="project">
+            <div class="project-title">Customer Satisfaction Analysis | <a href="https://github.com/tatiana441/customer-satisfaction-analysis">GitHub</a> | <a href="https://tatiana441.github.io/customer-satisfaction-analysis/">Demo Live</a></div>
+            <div class="project-tech">Python, Pandas, Jupyter Notebook, Data Visualization, EDA</div>
+            <p class="project-description">
+                Análisis exploratorio de datos (EDA) para identificar patrones y drivers de satisfacción del cliente. Dashboard web interactivo publicado con análisis de calidad de datos y KPI improvement opportunities. Proyecto de portfolio que demuestra workflows analíticos reproducibles.
+            </p>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Mi Canasta - Budget Manager | <a href="https://github.com/tatiana441/Mi_Canasta">GitHub</a></div>
+            <div class="project-tech">Python, Flask, HTML, CSS, JavaScript</div>
+            <p class="project-description">
+                Aplicación web full-stack para gestión de presupuestos y gastos de compras mensuales. CRUD completo, tracking de gastos, cálculo automático de presupuestos e interfaz responsive. 59 commits demuestran desarrollo iterativo.
+            </p>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Petroleum Data Visualization App | <a href="https://github.com/tatiana441/ProyectoFinalTCPro">GitHub</a></div>
+            <div class="project-tech">MIT App Inventor, Android, AI Integration, Google Sheets</div>
+            <p class="project-description">
+                App móvil Android para visualización de datos petroleros mediante gráficos y generación de resúmenes analíticos con IA. Integración con Google Sheets, cálculo de métricas estadísticas (correlación, pendiente, intercepto). APK descargable disponible.
+            </p>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+        <h3 class="section-title">Educación</h3>
+
+        <div class="education-item">
+            <div class="degree">Maestría en Ingeniería de Hidrocarburos</div>
+            <div class="institution">Universidad Industrial de Santander (UIS)</div>
+            <div class="edu-meta">Graduación: 2024</div>
+        </div>
+
+        <div class="education-item">
+            <div class="degree">Administración de Empresas</div>
+            <div class="institution">Universidad Industrial de Santander (UIS)</div>
+            <div class="edu-meta">Graduación: 2025</div>
+        </div>
+
+        <div class="education-item">
+            <div class="degree">Ingeniería de Petróleos</div>
+            <div class="institution">Universidad Industrial de Santander (UIS)</div>
+            <div class="edu-meta">Graduación: 2019</div>
+        </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="section">
+        <h3 class="section-title">Certificaciones</h3>
+        <div class="two-column">
+            <ul class="list-inline">
+                <li><strong>IELTS B2</strong> - English Language Proficiency</li>
+                <li><strong>Data Science for All</strong> - Correlation One</li>
+            </ul>
+            <ul class="list-inline">
+                <li><strong>Curso en Cloud Computing</strong> - AWS y Azure</li>
+                <li><strong>Introducción a Ciencia de Datos</strong> - TCPro</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
