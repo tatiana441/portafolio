@@ -959,6 +959,55 @@ body {
     font-weight: 500;
 }
 
+/* Contact Documents */
+.contact-documents {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #0066CC 0%, #00B4D8 100%);
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+}
+
+.contact-documents h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.contact-documents p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.document-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.document-buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: white;
+    color: var(--primary-color);
+    padding: 0.875rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.document-buttons .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.document-buttons .btn-secondary {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
 /* Footer */
 .footer {
     background-color: #0A0F1C;
