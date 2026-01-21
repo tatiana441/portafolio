@@ -742,7 +742,7 @@ body {
 }
 
 .project-features li {
-    color: var(--text-light);
+    color: var(--text-gray);
     padding-left: 1.8rem;
     margin-bottom: 0.5rem;
     position: relative;
