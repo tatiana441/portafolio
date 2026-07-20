@@ -1024,6 +1024,15 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
+.contact-documents a:not(.btn) {
+    color: white;
+    text-decoration: underline;
+}
+
+.contact-documents a:not(.btn):hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
 /* Footer */
 .footer {
     background-color: #0A0F1C;

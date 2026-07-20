@@ -285,18 +285,4 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Función para descargar CV (cuando tengas el PDF)
-function downloadCV() {
-    // Cuando tengas el CV en PDF, descomenta y ajusta la ruta:
-    // const link = document.createElement('a');
-    // link.href = 'CV_Tatiana_Munoz_BI_Analyst.pdf';
-    // link.download = 'CV_Tatiana_Munoz_BI_Analyst.pdf';
-    // link.click();
-
-    alert('CV disponible próximamente. Por ahora, contáctame en tatiana.441@gmail.com');
-}
-
-// Hacer la función accesible globalmente si agregas el botón de descarga
-window.downloadCV = downloadCV;
-
 console.log('✅ Portafolio cargado exitosamente');
