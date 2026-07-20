@@ -2,6 +2,30 @@
 // PORTAFOLIO TATIANA MUÑOZ - JAVASCRIPT
 // ===============================================
 
+// Años de experiencia en tiempo real: se calculan a partir de la fecha de
+// inicio (marzo 2021 en Teleperformance) en cada carga de página, para que
+// nunca vuelvan a quedar desactualizados. Cualquier elemento con el atributo
+// data-years-since="YYYY-MM" se actualiza automáticamente; data-years-suffix
+// agrega un texto después del número (ej. "años").
+function updateExperienceYears() {
+    document.querySelectorAll('[data-years-since]').forEach(el => {
+        const [year, month] = el.dataset.yearsSince.split('-').map(Number);
+        const startDate = new Date(year, month - 1, 1);
+        const now = new Date();
+
+        let years = now.getFullYear() - startDate.getFullYear();
+        const beforeAnniversary =
+            now.getMonth() < startDate.getMonth() ||
+            (now.getMonth() === startDate.getMonth() && now.getDate() < startDate.getDate());
+        if (beforeAnniversary) years--;
+
+        const suffix = el.dataset.yearsSuffix;
+        el.textContent = suffix ? `${years} ${suffix}` : years;
+    });
+}
+
+updateExperienceYears();
+
 // Navegación suave
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
