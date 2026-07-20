@@ -202,4 +202,4 @@ Si tienes problemas:
 
 **Creado con 💙 por Tatiana Muñoz**
 
-*BI Analyst | 4+ años experiencia | SQL Server | Python | NLP | Power BI | Six Sigma*
+*BI Analyst | 5+ años experiencia | SQL Server | Python | NLP | Power BI | Six Sigma*
